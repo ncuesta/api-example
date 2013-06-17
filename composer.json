@@ -1,0 +1,22 @@
+{
+    "minimum-stability": "dev",
+    "name": "ncuesta/api-example",
+    "description": "A basic example of a Hypermedia API",
+    "homepage": "https://github.com/ncuesta/api-example",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nahuel Cuesta Luengo",
+            "email": "nahuelcuestaluengo@gmail.com"
+        }
+    ],
+    "require": {
+        "silex/silex": ">= 1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.0"
+    },
+    "autoload": {
+        "psr-0": { "Api": "src/" }
+    }
+}
