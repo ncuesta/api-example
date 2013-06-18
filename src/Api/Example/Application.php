@@ -2,12 +2,15 @@
 
 namespace Api\Example;
 
+
 class Application extends \Silex\Application
 {
     private $env;
 
     public function __construct($env)
     {
+        parent::__construct();
+
         $this->env = $env;
 
         $this->loadConfig();
@@ -26,6 +29,15 @@ class Application extends \Silex\Application
 
     protected function initializeControllers()
     {
-        // TODO: Initialize controllers
+        foreach ($this->getControllers() as $controller) {
+            $controller->registerOn($this);
+        }
+    }
+
+    private function getControllers()
+    {
+        return array(
+            new Controllers\Cities
+        );
     }
 }
